@@ -34,7 +34,8 @@ const update = async (req, res) => {
         } else {
             if (mrp < price && stock <= 0) {
                 res.status(422).json({
-                    mss: 'MRP should be less than equal to the Price y Stock count is 0'
+                    mss1: 'MRP should be less than equal to the Price',
+                    mss2: ' Stock count is 0'
                 })
             } else if (mrp < price) {
                 res.status(422).json({
